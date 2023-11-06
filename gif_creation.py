@@ -3,13 +3,13 @@ import matplotlib.pyplot as plt
 import imageio
 import pandas as pd
 
-# Load your predicted data
+# Load predicted data
 df = pd.read_csv('predicted_bloom_dates.csv')
 
 # Latitude and longitude for Sapporo, Japan
 lat, lon = 43.06, 141.35
 
-# Your years and bloom_dates data
+# Years and bloom_dates data
 years = df['Year'].tolist()
 bloom_dates = df['BloomDate'].tolist()
 
@@ -35,9 +35,9 @@ for year, bloom_date in zip(years, bloom_dates):
     # Save the figure
     plt.savefig(f"map_{year}.png")
 
-# Create a list of filenames
+# Create list of filenames
 filenames = [f"map_{year}.png" for year in years]
 
-# Create a gif from the images
+# Create gif from the images
 images = [imageio.imread(filename) for filename in filenames]
 imageio.mimsave('output.gif', images, duration=0.5)
