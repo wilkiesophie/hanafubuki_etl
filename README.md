@@ -6,6 +6,6 @@ This project:
 2. Transforms and cleans CSV data. 
 3. Provides statistical analysis of blossom data. 
 4. Offers custom visualisations based on preferred location and date. 
-5. ML basic linear regression then predicts first bloom dates for the next 10 years. 
+5. ML basic linear regression predicts first bloom dates for the next 10 years. 
 6. Creates a CSV file and GIF of predicted dates.
 
